@@ -1,0 +1,70 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Cenario.h
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+RaciocinioLogicoMatematico.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.h
+FichaDoPersonagem.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.h
+GeradorDeTelas.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.h
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.cpp
+Game.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.h
+Tutorial.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Tutorial.h
+Cenario.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Cenario.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.h
+vector
+-
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+FichaDoPersonagem.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.h
+RaciocinioLogicoMatematico.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.h
+GeradorDeTelas.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.h
+ostream
+-
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Tutorial.h
+Game.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+iostream
+-
+sstream
+-
+string
+-
+thread
+-
+chrono
+-
+vector
+-
+

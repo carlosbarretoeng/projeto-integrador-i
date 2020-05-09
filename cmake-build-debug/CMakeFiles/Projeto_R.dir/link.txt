@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Projeto_R.dir/main.cpp.o CMakeFiles/Projeto_R.dir/FichaDoPersonagem.cpp.o CMakeFiles/Projeto_R.dir/Util.cpp.o CMakeFiles/Projeto_R.dir/Game.cpp.o CMakeFiles/Projeto_R.dir/Tutorial.cpp.o CMakeFiles/Projeto_R.dir/RaciocinioLogicoMatematico.cpp.o CMakeFiles/Projeto_R.dir/Cenario.cpp.o CMakeFiles/Projeto_R.dir/GeradorDeTelas.cpp.o  -o Projeto_R 

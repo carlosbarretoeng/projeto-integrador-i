@@ -1,0 +1,3 @@
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/cmake-build-debug/CMakeFiles/Projeto_R.dir
