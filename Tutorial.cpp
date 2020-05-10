@@ -19,8 +19,8 @@ void Tutorial::exibirJardim() {
     conteudo = geradorDeTelas.gerarLinhaHorizontal(conteudo, 2);
 
     string textos[] = {
-            "Bem vindo ao seu magnifico jardim.",
-            "Nele voce visualiza alguns canteiros, repletos das mais variadas flores, um banquinho aconchegante para "
+            "Voce esta no seu magnifico jardim.",
+            "Nele, visualiza alguns canteiros repletos das mais variadas flores, um banquinho aconchegante para "
             "descansar, uma pequena fonte de agua em formato de peixe, jorrando agua para o ar. Ao lado, o jardineiro "
             "cuidando das delicadas rosas, apreciando seus perfumes e, mais a diante, vindo na sua direcao, "
             "o mensageiro do Rei!"

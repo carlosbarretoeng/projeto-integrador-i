@@ -58,8 +58,8 @@ string GeradorDeTelas::escreverTexto(string frame, string texto, int posX, int p
 }
 
 string GeradorDeTelas::escreverBlocoDeTexto(string frame, string texto, int posY, int &last) {
-    int posX = 2;
-    int limiteLinha = getWidth() - 3;
+    int posX = 3;
+    int limiteLinha = getWidth() - 4;
     vector<string> palavras;
     Util::dividirTexto(texto, ' ', palavras);
 

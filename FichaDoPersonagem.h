@@ -2,9 +2,12 @@
 #define PROJETO_R_FICHADOPERSONAGEM_H
 
 #include "Util.h"
+#include "GeradorDeTelas.h"
 
 class FichaDoPersonagem {
 private:
+    GeradorDeTelas geradorDeTelas;
+
     string NOME;
     float VIDA;
     float FORCA;
@@ -18,6 +21,8 @@ public:
     FichaDoPersonagem();
 
     FichaDoPersonagem(const string &nome);
+
+    void setGeradorDeTelas(const GeradorDeTelas &geradorDeTelas);
 
     void setNome(const string &nome);
 

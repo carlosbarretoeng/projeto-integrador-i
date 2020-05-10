@@ -47,8 +47,50 @@ void FichaDoPersonagem::setSabedoria(float sabedoria) {
 }
 
 void FichaDoPersonagem::mostrarFichaDoPersonagem() {
-    cout << NOME << "\t" << VIDA << "\t" << SABEDORIA << "\t" << FORCA << endl;
-    cout << "MODIFICADORES" << endl;
+    Util::limparTelaEstatico();
+    string conteudo = geradorDeTelas.gerarFrame();
+    conteudo = geradorDeTelas.escreverTexto(conteudo,
+                                            "UNIFAGOC - CIENCIA DA COMPUTACAO - PROJETO INTEGRADOR I - PROJETO RPG", 4,
+                                            1);
+    conteudo = geradorDeTelas.gerarLinhaHorizontal(conteudo, 2);
+
+    string textos[] = {
+            "STATUS DO PERSONAGEM:",
+            "",
+            "     NOME: " + getNome(),
+            "     VIDA: " + Util::to_string(getVida(), 2),
+            "SABEDORIA: " + Util::to_string(getSabedoria(), 2),
+            "    FORCA: " + Util::to_string(getForca(), 2),
+    };
+
+    int lastY = 2;
+    for (string texto: textos) {
+        conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, texto, ++lastY, lastY);
+    }
+
+    conteudo = geradorDeTelas.gerarLinhaHorizontal(conteudo, lastY);
+
+    string modificadores[] = {
+            "MODIFICADORES:",
+            "",
+            "POSITIVA-VITAL: Garante um acressimo de 2 pontos no atributo afetado e "
+            "                     adiciona 0.25 pontos de vida.",
+            "      POSITIVA: Garante um acressimo de 1 pontos no atributo afetado.",
+            "        NEUTRA: Nao altera os status do personagem.",
+            "      NEGATIVA: Reduz em 1 ponto o atributo afetado. Nao aplicado se "
+            "                       atributo for menor que 1.",
+            "NEGATIVA-VITAL: Reduz em 2 ponto o atributo afetado e em 0.75 pontos a "
+            "                     vida. Nao aplicado se atributo for menor que 2, mas ainda "
+            "                  assim altera a vida.",
+    };
+
+    for (string texto: modificadores) {
+        conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, texto, ++lastY, lastY);
+    }
+
+    conteudo = geradorDeTelas.escreverTexto(conteudo, "Pressione <ENTER>", geradorDeTelas.getWidth() - 18, geradorDeTelas.getHeight() - 2);
+    cout << conteudo;
+    Util::aguardarEnterEstatico();
 }
 
 bool FichaDoPersonagem::modificarCaracteristica(string caracteristica, int valor) {
@@ -73,17 +115,21 @@ bool FichaDoPersonagem::modificarCaracteristica(string caracteristica, int valor
 }
 
 bool FichaDoPersonagem::aplicaPositivaVital(string caracteristica) {
-
+    return false;
 }
 
 bool FichaDoPersonagem::aplicaPositiva(string caracteristica) {
-
+    return false;
 }
 
 bool FichaDoPersonagem::aplicaNegativa(string caracteristica) {
-
+    return false;
 }
 
 bool FichaDoPersonagem::aplicaNegativaVital(string caracteristica) {
+    return false;
+}
 
+void FichaDoPersonagem::setGeradorDeTelas(const GeradorDeTelas &geradorDeTelas) {
+    FichaDoPersonagem::geradorDeTelas = geradorDeTelas;
 }

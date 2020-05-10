@@ -43,6 +43,12 @@ public:
     static void limparTelaEstatico();
 
     static int aleatorioEntreEstatico(int min, int max);
+
+    static wstring utf8_to_utf16(const string &utf8);
+
+    static string to_string(int a_value, const int n);
+
+    static void aguardarEnterEstatico();
 };
 
 

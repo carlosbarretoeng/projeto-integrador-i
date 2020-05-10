@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Cenario.cpp
+Cenario.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Cenario.h
+
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Cenario.h
 Util.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
@@ -16,9 +20,15 @@ FichaDoPersonagem.h
 GeradorDeTelas.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
 
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.cpp
+FichaDoPersonagem.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.h
+
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/FichaDoPersonagem.h
 Util.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+GeradorDeTelas.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
 
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.cpp
 Game.h
@@ -40,9 +50,17 @@ RaciocinioLogicoMatematico.h
 GeradorDeTelas.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
 
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.cpp
+GeradorDeTelas.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
+
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/GeradorDeTelas.h
 Util.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.cpp
+RaciocinioLogicoMatematico.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.h
 
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/RaciocinioLogicoMatematico.h
 ostream
@@ -50,9 +68,17 @@ ostream
 Util.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
 
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Tutorial.cpp
+Tutorial.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Tutorial.h
+
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Tutorial.h
 Game.h
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.h
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.cpp
+Util.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
 
 /home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Util.h
 iostream
@@ -67,4 +93,8 @@ chrono
 -
 vector
 -
+
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/main.cpp
+Game.h
+/home/carlos/Área de Trabalho/UNIFAGOC_CC/Projeto R/Game.h
 

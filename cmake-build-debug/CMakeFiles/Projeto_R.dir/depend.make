@@ -10,6 +10,7 @@ CMakeFiles/Projeto_R.dir/Cenario.cpp.o: ../Util.h
 
 CMakeFiles/Projeto_R.dir/FichaDoPersonagem.cpp.o: ../FichaDoPersonagem.cpp
 CMakeFiles/Projeto_R.dir/FichaDoPersonagem.cpp.o: ../FichaDoPersonagem.h
+CMakeFiles/Projeto_R.dir/FichaDoPersonagem.cpp.o: ../GeradorDeTelas.h
 CMakeFiles/Projeto_R.dir/FichaDoPersonagem.cpp.o: ../Util.h
 
 CMakeFiles/Projeto_R.dir/Game.cpp.o: ../Cenario.h
