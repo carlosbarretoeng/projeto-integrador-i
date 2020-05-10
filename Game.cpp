@@ -9,6 +9,8 @@ Game::Game(int width, int height){
     geradorDeTelas.setWidth(WIDTH);
     geradorDeTelas.setHeight(HEIGHT);
     fichaDoPersonagem.setGeradorDeTelas(geradorDeTelas);
+
+
 }
 
 Game::Game(int width, int height, vector<RaciocinioLogicoMatematico> desafiosRlm, GeradorDeTelas gerador) : WIDTH(width), HEIGHT(height), desafiosRLM(desafiosRlm), geradorDeTelas(gerador) {
@@ -17,14 +19,11 @@ Game::Game(int width, int height, vector<RaciocinioLogicoMatematico> desafiosRlm
 void Game::start() {
     // warmup();
 
-    // telaDeApresentacao();
-    // telaDeSelecaoDaDificuldade();
-    // telaDeIntroducaoDaHistoria();
-    // telaDeIntroducaoDoPersonagem();
-    fichaDoPersonagem.setNome("Carlos Barreto");
-    fichaDoPersonagem.mostrarFichaDoPersonagem();
-    return;
-    // (new Tutorial(util,fichaDoPersonagem, geradorDeTelas))->iniciar();
+    /*telaDeApresentacao();
+    telaDeSelecaoDaDificuldade();
+    telaDeIntroducaoDaHistoria();
+    telaDeIntroducaoDoPersonagem();
+    (new Tutorial(util,fichaDoPersonagem, geradorDeTelas))->iniciar();*/
     // telaDeConviteAExploracao();
 
     bool condicaoDeParadaDeTreinamento = false;
@@ -165,7 +164,13 @@ void Game::telaDeConviteAExploracao() {
     conteudo = geradorDeTelas.gerarLinhaHorizontal(conteudo, 2);
 
     int lastY;
-    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "A jornada se inicia...", 4, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "A jornada se inicia.", 4, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "", ++lastY, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "Agora nosso heroi precisa sair em busca de desafios para aprimorar cada vez meis seu corpo e sua mente. Você ira caminhar pelas estradas do feudo em busca de qualquer dica de como se tornar um combatente mais rapido, forte e tatico. Ou ainda, achar uma solucao definitiva para esse torneio que por geracoes tem tirado a vida de muitos.", ++lastY, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "", ++lastY, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "A cada novo cenario, voce sera confrontado com escolhas a fazer e caminhos a tomar. Cada um podera te levar a experiencias incriveis ou a dores tenebrosas.", ++lastY, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "", ++lastY, lastY);
+    conteudo = geradorDeTelas.escreverBlocoDeTexto(conteudo, "Escolha com sabedoria e resista fortemente!", ++lastY, lastY);
 
     conteudo = geradorDeTelas.escreverTexto(conteudo, "Pressione <ENTER>", getWidth() - 18, getHeight() - 2);
     cout << conteudo;
@@ -180,7 +185,7 @@ bool Game::avaliarCondicaoDeParadaDeTreinamento() {
             break;
         }
     }
-    return (todosOsDesafiosJaForamFeitos);
+    return (todosOsDesafiosJaForamFeitos || fichaDoPersonagem.getVida() <= 0);
 }
 
 bool Game::avaliarCondicaoDeTorneio() {

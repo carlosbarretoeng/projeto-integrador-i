@@ -104,7 +104,7 @@ void GeradorDeTelas::rolarDeDados(){
     for(int i=0; i<10; i++){
         Util::limparTelaEstatico();
         string conteudo = gerarFrame();
-        conteudo = escreverTexto(conteudo,"UNIFAGOC - CIENCIA DA COMPUTACAO - PROJETO INTEGRADOR I - PROJETO RPG", 4,1);
+        conteudo = escreverTexto(conteudo,"UNIFAGOC - CIENCIA DA COMPUTACAO - PROJETO INTEGRADOR I - PROJETO R", 4,1);
         conteudo = gerarLinhaHorizontal(conteudo, 2);
 
         int pos = 0;
@@ -124,11 +124,11 @@ void GeradorDeTelas::rolarDeDados(int valor, string &conteudo){
 
     Util::limparTelaEstatico();
     conteudo = gerarFrame();
-    conteudo = escreverTexto(conteudo,"UNIFAGOC - CIENCIA DA COMPUTACAO - PROJETO INTEGRADOR I - PROJETO RPG", 4,1);
+    conteudo = escreverTexto(conteudo,"UNIFAGOC - CIENCIA DA COMPUTACAO - PROJETO INTEGRADOR I - PROJETO R", 4,1);
     conteudo = gerarLinhaHorizontal(conteudo, 2);
 
     int pos = 0;
-    for(string l: dados[valor]){
+    for(string l: dados[valor - 1]){
         conteudo = escreverTexto(conteudo, l, 35, 9 + pos);
         pos++;
     }

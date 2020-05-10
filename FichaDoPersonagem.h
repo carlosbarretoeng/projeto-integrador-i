@@ -32,12 +32,16 @@ public:
     float getSabedoria() const;
 
     void mostrarFichaDoPersonagem();
-    bool modificarCaracteristica(string caracteristica, int valor);
+    bool modificador(string caracteristica, int valor);
 
     bool aplicaPositivaVital(string caracteristica);
     bool aplicaPositiva(string caracteristica);
     bool aplicaNegativa(string caracteristica);
     bool aplicaNegativaVital(string caracteristica);
+
+    void aplicarModificador(string caracteristica, float valor);
+
+    string mensagemDeModificadores(string caracteristica, int valorDados);
 };
 
 

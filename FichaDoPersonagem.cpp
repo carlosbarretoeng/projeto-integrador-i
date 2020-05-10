@@ -93,43 +93,52 @@ void FichaDoPersonagem::mostrarFichaDoPersonagem() {
     Util::aguardarEnterEstatico();
 }
 
-bool FichaDoPersonagem::modificarCaracteristica(string caracteristica, int valor) {
-    bool retorno = false;
+bool FichaDoPersonagem::modificador(string caracteristica, int valor) {
     switch (valor) {
         case 6:
-            retorno = aplicaPositivaVital(caracteristica);
-            break;
+            aplicarModificador("VIDA", 0.25f);
+            aplicarModificador(caracteristica, 2.0f);
+            return true;
         case 5:
-            retorno = aplicaPositiva(caracteristica);
-            break;
+            aplicarModificador(caracteristica, 1.0f);
+            return true;
         case 2:
-            retorno = aplicaNegativa(caracteristica);
-            break;
+            if(caracteristica == "SABEDORIA" && getSabedoria() < 2) return false;
+            if(caracteristica == "FORÇA" && getForca() < 2) return false;
+            aplicarModificador(caracteristica, -1.0f);
+            return true;
         case 1:
-            retorno = aplicaNegativaVital(caracteristica);
-            break;
+            aplicarModificador("VIDA", -0.75f);
+            if(caracteristica == "SABEDORIA" && getSabedoria() < 3) return false;
+            if(caracteristica == "SABEDORIA" && getSabedoria() < 3) return false;
+            aplicarModificador(caracteristica, -2.0f);
+            return true;
         default:
-            break;
+            return true;
     }
-    return false;
 }
 
-bool FichaDoPersonagem::aplicaPositivaVital(string caracteristica) {
-    return false;
-}
-
-bool FichaDoPersonagem::aplicaPositiva(string caracteristica) {
-    return false;
-}
-
-bool FichaDoPersonagem::aplicaNegativa(string caracteristica) {
-    return false;
-}
-
-bool FichaDoPersonagem::aplicaNegativaVital(string caracteristica) {
-    return false;
+void FichaDoPersonagem::aplicarModificador(string caracteristica, float valor){
+    if(caracteristica == "VIDA") setVida(getVida() + valor);
+    if(caracteristica == "SABEDORIA") setSabedoria(getSabedoria() + valor);
+    if(caracteristica == "FORCA") setForca(getForca() + valor);
 }
 
 void FichaDoPersonagem::setGeradorDeTelas(const GeradorDeTelas &geradorDeTelas) {
     FichaDoPersonagem::geradorDeTelas = geradorDeTelas;
+}
+
+string FichaDoPersonagem::mensagemDeModificadores(string caracteristica, int valorDados) {
+    switch (valorDados) {
+        case 6:
+            return "SUCESSO! Voce obteve um acerto critico e recebeu 2 pontos de " + caracteristica + " e mais 0.25 de VIDA";
+        case 5:
+            return "Legal! Voce obteve um bom resultado e recebeu 1 pontos de " + caracteristica;
+        case 2:
+            return "Cuidado! Voce obteve um aml resultado e perdeu 1 pontos de " + caracteristica;
+        case 1:
+            return "Cuidado! Voce obteve um aml resultado e perdeu 1 pontos de " + caracteristica;
+        default:
+            return "Nao foi dessa vez, mas continue tentando! (Sua vida depende disso!)";
+    }
 }
